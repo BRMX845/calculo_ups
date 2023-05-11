@@ -7,6 +7,4 @@ def ups(N,V,A,E,VA):
     resultado=((N*V*A*E)/VA)*60
     return resultado
 print(ups(N,V,A,E,Va))
-print("hola mundo")
-
 
