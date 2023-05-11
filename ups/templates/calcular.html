@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Calculadora</title>
+</head>
+<body class="m-4">
+    <h1 class="mx-auto" style="width: 300px;">Calculo UPS</h1>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <label class="row">Servidor:
+                <input type="text" name="servidor" required placeholder="Cantidad de servidores">
+            </label>
+            <label class="row">Switch:
+                <input type="text" name="switch" required placeholder="Cantidad de switches">
+            </label>
+            <label class="row">ventiladores:
+                <input type="text" name="ventiladores" required placeholder="cantidad de ventiladores">
+            </label>
+            <input type="submit" value="Calcular">
+        </form>
+    </div>
+</body>
+</html>
