@@ -14,62 +14,65 @@
             <form method="post">
                 {% csrf_token %}
                 <label class="row">Servidor:
-                    <input type="number" name="servidor" required placeholder="Cantidad de servidores">
+                    <input type="number" min="0" name="servidor" required placeholder="Cantidad de servidores">
                 </label>
                 <label class="row">Switch:
-                    <input type="number" name="switch" required placeholder="Cantidad de switches">
+                    <input type="number" min="0" name="switch" required placeholder="Cantidad de switches">
                 </label>
                 <label class="row">ventiladores:
-                    <input type="number" name="ventiladores" required placeholder="cantidad de ventiladores">
+                    <input type="number" min="0" name="ventiladores" required placeholder="cantidad de ventiladores">
                 </label>
                 <label class="row">Racks:
-                    <input type="number" name="racks" required placeholder="cantidad de racks">
+                    <input type="number" min="0" name="racks" required placeholder="cantidad de racks">
                 </label>
                 <label class="row">DMZ:
-                    <input type="number" name="dmz" required placeholder="cantidad de dmz">
+                    <input type="number" min="0"  name="dmz" required placeholder="cantidad de dmz">
                 </label>
                 <label class="row">Router:
-                    <input type="number" name="router" required placeholder="cantidad de routers">
+                    <input type="number" min="0" name="router" required placeholder="cantidad de routers">
                 </label>
                 <label class="row">Modem:
-                    <input type="number" name="Modem" required placeholder="cantidad de modems">
+                    <input type="number" min="0" name="Modem" required placeholder="cantidad de modems">
                 </label>
                 <label class="row">Pbx:
-                    <input type="number" name="pbx" required placeholder="cantidad de pbx">
+                    <input type="number" min="0" name="pbx" required placeholder="cantidad de pbx">
                 </label>
                 <label class="row">monitores:
-                    <input type="number" name="monitores" required placeholder="cantidad de monitores">
+                    <input type="number" min="0" name="monitores" required placeholder="cantidad de monitores" >
                 </label>
                 <label class="row">accespoint:
-                    <input type="number" name="access" required placeholder="cantidad de accesspoint">
+                    <input type="number" min="0" name="access" required placeholder="cantidad de accesspoint">
                 </label>
                 <label class="row">computadoras:
-                    <input type="number" name="computadoras" required placeholder="cantidad de computadoras">
+                    <input type="number" min="0" name="computadoras" required placeholder="cantidad de computadoras">
                 </label>
                 <label class="row">Aire Acondicionado:
-                    <input type="number" name="aire" required placeholder="cantidad de Aire Acondicionado">
+                    <input type="number" min="0" name="aire" required placeholder="cantidad de Aire Acondicionado">
                 </label>
                 <label class="row">camaras:
-                    <input type="number" name="camaras" required placeholder="cantidad de camaras">
+                    <input type="number" min="0" name="Cámaras" required placeholder="cantidad de cámaras">
                 </label>
                 <label class="row">puertas:
-                    <input type="number" name="puertas" required placeholder="cantidad de puertas">
+                    <input type="number" min="0" name="puertas" required placeholder="cantidad de puertas">
                 </label>
                 <label class="row">sensores de temperatura:
-                    <input type="number" name="sensor" required placeholder="cantidad de temperaturas">
+                    <input type="number" min="0" name="sensor" required placeholder="cantidad de temperaturas">
                 </label>
                 <label class="row">Servidores NAS:
-                    <input type="number" name="nas" required placeholder="cantidad de NAS">
+                    <input type="number" min="0" name="nas" required placeholder="cantidad de NAS">
                 </label>
-                <input type="submit" value="Calcular">
+                <input type="submit" min="0" value="Calcular">
             </form>
         </div>
         <div class="col-6">
             <h3>resultado</h3>
-            <p>a {{ resultado }} en vatios y los posibles ups son: {{ ejemplo }}</p>
+            <p>a {{ resultado }} en vatios y los posibles ups son:</p>
+            <a href="{{ compra }}">{{ ejemplo }}</a>
         </div>
     </div>
 </div>
-    <h1 style="text-align: center;">Calculo del BTU</h1>
+<h1 style="text-align: center;">Calculo del BTU</h1>
+<p>a {{ btus }} en Btu y los posibles equipos son:</p>
+<a href="{{url_enfr}}">{{enfriamiento}}</a>
 </body>
 </html>
