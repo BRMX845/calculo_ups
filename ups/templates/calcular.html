@@ -7,72 +7,139 @@
     <title>Calculadora</title>
 </head>
 <body class="m-4">
-    <h1 class="mx-auto" style="width: 300px;">Calculo UPS</h1>
+    <h1 class="mx-auto" style="text-align: center;">Calculo UPS</h1>
 <div class="container">
     <div class="row justify-content-start">
         <div class="col-6">
-            <form method="post">
+            <form method="post"  style="background-color: aquamarine;">
                 {% csrf_token %}
-                <label class="row">Servidor:
-                    <input type="number" min="0" name="servidor" required placeholder="Cantidad de servidores">
-                </label>
-                <label class="row">Switch:
-                    <input type="number" min="0" name="switch" required placeholder="Cantidad de switches">
-                </label>
-                <label class="row">ventiladores:
-                    <input type="number" min="0" name="ventiladores" required placeholder="cantidad de ventiladores">
-                </label>
-                <label class="row">Racks:
-                    <input type="number" min="0" name="racks" required placeholder="cantidad de racks">
-                </label>
-                <label class="row">DMZ:
-                    <input type="number" min="0"  name="dmz" required placeholder="cantidad de dmz">
-                </label>
-                <label class="row">Router:
-                    <input type="number" min="0" name="router" required placeholder="cantidad de routers">
-                </label>
-                <label class="row">Modem:
-                    <input type="number" min="0" name="Modem" required placeholder="cantidad de modems">
-                </label>
-                <label class="row">Pbx:
-                    <input type="number" min="0" name="pbx" required placeholder="cantidad de pbx">
-                </label>
-                <label class="row">monitores:
-                    <input type="number" min="0" name="monitores" required placeholder="cantidad de monitores" >
-                </label>
-                <label class="row">accespoint:
-                    <input type="number" min="0" name="access" required placeholder="cantidad de accesspoint">
-                </label>
-                <label class="row">computadoras:
-                    <input type="number" min="0" name="computadoras" required placeholder="cantidad de computadoras">
-                </label>
-                <label class="row">Aire Acondicionado:
-                    <input type="number" min="0" name="aire" required placeholder="cantidad de Aire Acondicionado">
-                </label>
-                <label class="row">camaras:
-                    <input type="number" min="0" name="Cámaras" required placeholder="cantidad de cámaras">
-                </label>
-                <label class="row">puertas:
-                    <input type="number" min="0" name="puertas" required placeholder="cantidad de puertas">
-                </label>
-                <label class="row">sensores de temperatura:
-                    <input type="number" min="0" name="sensor" required placeholder="cantidad de temperaturas">
-                </label>
-                <label class="row">Servidores NAS:
-                    <input type="number" min="0" name="nas" required placeholder="cantidad de NAS">
-                </label>
-                <input type="submit" min="0" value="Calcular">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Servidor:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="servidor" required placeholder="Cantidad de servidores" class="form-control">
+                    </div>
+                  </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Switch:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="switch" required placeholder="Cantidad de switches" class="form-control">
+                    </div>
+                </div>
+              
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Ventiladores: </label>
+                    <div class="col-sm-9">
+                        <input type="number" min="0" name="ventiladores" required placeholder="cantidad de ventiladores" class="form-control">
+                      </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Racks:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="racks" required placeholder="cantidad de racks" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">DMZ:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="dmz" required placeholder="cantidad de dmz" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Router:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="router" required placeholder="cantidad de routers" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Modem:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="Modem" required placeholder="cantidad de modems" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Pbx:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="pbx" required placeholder="cantidad de pbx" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">monitores:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="monitores" required placeholder="cantidad de monitores" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">accespoint:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="access" required placeholder="cantidad de accesspoint" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">computadoras:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="computadoras" required placeholder="cantidad de computadoras" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Aire Acondicionado:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="aire" required placeholder="cantidad de Aire Acondicionado" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Cámaras:</label>
+                    <div class="col-sm-9">
+                      <input type="number" min="0" name="Cámaras" required placeholder="cantidad de cámaras" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">puertas:</label>
+                    <div class="col-sm-9">
+                        <input type="number" min="0" name="puertas" required placeholder="cantidad de puertas" class="form-control">
+                      </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">sensores de temperatura:</label>
+                      <div class="col-sm-9">
+                        <input type="number" min="0" name="sensor" required placeholder="cantidad de temperaturas" class="form-control">
+                      </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Servidores NAS:</label>
+                      <div class="col-sm-9">
+                        <input type="number" min="0" name="nas" required placeholder="cantidad de NAS" class="form-control">
+                      </div>
+                    </div>
+                    <input type="submit" value="Calcular" style="margin-right: 1rem;">
             </form>
         </div>
-        <div class="col-6">
-            <h3>resultado</h3>
+        <div class="col-6" style="background-color: aquamarine;">
+            <h3>Resultado</h3>
             <p>a {{ resultado }} en vatios y los posibles ups son:</p>
             <a href="{{ compra }}">{{ ejemplo }}</a>
         </div>
     </div>
 </div>
+
 <h1 style="text-align: center;">Calculo del BTU</h1>
-<p>a {{ btus }} en Btu y los posibles equipos son:</p>
-<a href="{{url_enfr}}">{{enfriamiento}}</a>
-</body>
+<div class="container" style="background-color: aquamarine;">
+    <p>a {{ btus }} en Btu y los posibles equipos son:</p>
+    <a href="{{url_enfr}}">{{enfriamiento}}</a>
+    </body>
+</div>
+
 </html>
